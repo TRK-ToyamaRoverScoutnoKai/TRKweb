@@ -1,0 +1,24 @@
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* 画面の高さの半分（お好みで400pxなどに変更可能） */
+  min-height: 300px;
+  overflow: hidden;
+  background-color: #f0f0f0; /* 画像読み込み前の背景色 */
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out; /* ふんわり切り替わるアニメーション */
+}
+
+.slide.active {
+  opacity: 1;
+}
