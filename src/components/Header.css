@@ -1,0 +1,61 @@
+.header {
+  background-color: #ffffff; /* スカウトらしい赤色に変更 */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: flex-end; /* PCでは右側にナビを寄せる */
+  align-items: center;
+  position: relative; /* 中央揃えの基準にするため */
+  max-width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ロゴエリアを絶対に中央に配置 */
+.logo-area {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-image {
+  height: 40px; /* 画像のサイズに合わせて調整してください */
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #b21d23; /* 赤背景に合わせて白文字に */
+  white-space: nowrap;
+}
+
+.nav-desktop { display: flex; gap: 20px; }
+.nav-link { text-decoration: none; color: #b21d23; font-weight: 500; transition: opacity 0.2s; }
+.nav-link:hover { opacity: 0.8; }
+
+.hamburger-icon { display: none; font-size: 1.5rem; cursor: pointer; color: #ffffff; }
+.nav-mobile { display: none; }
+
+@media (max-width: 850px) {
+  .nav-desktop { display: none; }
+  .header-container { justify-content: flex-start; /* スマホではハンバーガーを左に */ }
+  .hamburger-icon { display: block; z-index: 1001; }
+  .logo-text { font-size: 1rem; } /* スマホでは文字を少し小さく */
+  
+  .nav-mobile { display: flex; flex-direction: column; background-color: #ffffff; position: absolute; top: 60px; left: 0; width: 100%; border-top: 1px solid #eee; transform: translateY(-150%); transition: transform 0.3s; }
+  .nav-mobile.open { transform: translateY(0); }
+  .nav-mobile-link { padding: 15px 20px; text-decoration: none; color: #333; border-bottom: 1px solid #f5f5f5; font-weight: bold;}
+}
