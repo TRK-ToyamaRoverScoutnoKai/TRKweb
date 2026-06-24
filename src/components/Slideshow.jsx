@@ -3,9 +3,10 @@ import './Slideshow.css';
 
 // ↓ ここにスライドショーで流したい画像のパスを配列で入れます
 const images = [
-  "src/assets/Slideshow/test (1).jpg", 
-  "src/assets/Slideshow/test (2).jpg", 
-  "src/assets/Slideshow/test (3).jpg", 
+  "src/assets/Slideshow/camp.png",
+  "src/assets/Slideshow/sea.png",
+  "src/assets/Slideshow/tateyama.png",
+  "public/TRKlogo.png"
 ];
 
 const Slideshow = () => {
