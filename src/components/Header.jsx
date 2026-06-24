@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Header.css';
+import logoImage from '../assets/Header/TRKlogo.png';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ const Header = () => {
         {/* 中央のロゴとタイトル */}
         <Link to="/" className="logo-area" onClick={() => setIsOpen(false)}>
           {/* ↓ ここにロゴ画像のパスを入れます（例: publicフォルダの logo.png なら "/logo.png"） */}
-          <img src="src/assets/Header/TRKlogo.png" alt="TRK Logo" className="logo-image" />
+          <img src={logoImage} alt="TRK Logo" className="logo-image" />
           <span className="logo-text">富山ローバースカウトの会(TRK)</span>
         </Link>
 

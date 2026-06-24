@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Slideshow.css';
+import campImg from '../assets/Slideshow/camp.png';
+import seaImg from '../assets/Slideshow/sea.png';
+import tateyamaImg from '../assets/Slideshow/tateyama.png';
 
 // ↓ ここにスライドショーで流したい画像のパスを配列で入れます
-const images = [
-  "src/assets/Slideshow/camp.png",
-  "src/assets/Slideshow/sea.png",
-  "src/assets/Slideshow/tateyama.png",
-  "public/TRKlogo.png"
-];
+const images = [campImg, seaImg, tateyamaImg];
 
 const Slideshow = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -1,11 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// ★BrowserRouter から HashRouter に変更します
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Slideshow from './components/Slideshow'; // スライドショーをインポート
+import Slideshow from './components/Slideshow';
 
 const Home = () => (
   <div>
-    {/* ホーム画面の一番上にスライドショーを配置 */}
     <Slideshow />
     <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
       <h2>ホーム画面</h2>
