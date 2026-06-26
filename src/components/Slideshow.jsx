@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import './Slideshow.css';
+
+// ★追加：使いたい画像をすべてインポートする
 import campImg from '../assets/Slideshow/camp.png';
 import seaImg from '../assets/Slideshow/sea.png';
 import tateyamaImg from '../assets/Slideshow/tateyama.png';
 
-// ↓ ここにスライドショーで流したい画像のパスを配列で入れます
+// ★変更：インポートした変数を配列に入れる
 const images = [campImg, seaImg, tateyamaImg];
 
 const Slideshow = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    // 4秒（4000ミリ秒）ごとに画像を切り替えるタイマー
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 4000);
