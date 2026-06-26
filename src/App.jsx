@@ -48,7 +48,9 @@ const Home = () => (
       
       {/* ★ここに後でInstagramウィジェットのコードを貼り付けます */}
       <div className="instagram-widget-container" style={{ minHeight: '400px', background: '#fff', padding: '20px', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
-        <p style={{ textAlign: 'center' }}>（ここにInstagramのギャラリーが表示されます）</p>
+        {/* <!-- Elfsight Instagram Feed | Untitled Instagram Feed --> */}
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-57f366b1-182a-44fc-9817-08e30cc13c3a" data-elfsight-app-lazy></div>
       </div>
 
     </div>
